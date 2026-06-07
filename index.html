@@ -291,30 +291,50 @@ footer{background:var(--bg);border-top:1px solid var(--b1);padding:2rem 0;z-inde
 /* ════════════════════ RESPONSIVE ════════════════════ */
 @media(max-width:1100px){
   .hero-wrap{grid-template-columns:1fr}
-  .hright{min-height:60vh;border-left:none;border-top:1px solid var(--b1)}
+  .hright{min-height:55vh;border-left:none;border-top:1px solid var(--b1)}
   .hleft{padding:8rem 3rem 4rem}
-  .terminal{width:420px}
   .dsagrid{grid-template-columns:220px 1fr}
   .dsaplats{grid-column:1/-1;flex-direction:row;flex-wrap:wrap;gap:.8rem}
   .dplat{flex:1;min-width:170px}.dsacard{max-width:220px}
+  .epname{flex-wrap:wrap;gap:.4rem}
 }
 @media(max-width:860px){
   nav{padding:.85rem 1.5rem}.nlinks{display:none}.nbg{display:flex}
+  #themeBtn{margin-left:.3rem}
   .hleft{padding:7rem 1.5rem 3rem}
-  .hright{min-height:auto;padding:2rem 1.5rem}
+  .hright{min-height:42vh;padding:0}
+  .hstats{gap:1.2rem;flex-wrap:wrap}
+  .hfacts{gap:.4rem}
   .ag{grid-template-columns:1fr;gap:2.5rem}
   .pgrid{grid-template-columns:1fr 1fr}.pc.f{grid-column:1/-1}
   .dsagrid{grid-template-columns:1fr}.dsacard{max-width:100%}.dsaplats{flex-direction:column}
   .achgrid{grid-template-columns:1fr 1fr}.exgrid{grid-template-columns:1fr}
   .cgrid{grid-template-columns:1fr;gap:2.5rem}
   section{padding:5rem 0}.ct{padding:0 1.4rem}
+  .eprojs{gap:1rem}
+  .epname{font-size:.84rem;flex-wrap:wrap;gap:.35rem}
+  .tr-row{gap:.3rem}.tr-row span{font-size:.64rem}
+  .pst span{font-size:.64rem}
 }
 @media(max-width:560px){
   .pgrid{grid-template-columns:1fr}.pc.f{grid-column:1}
   .achgrid{grid-template-columns:1fr}
   .hstats .hsep{display:none}
+  .hstats{gap:.8rem}
   .hbtns{flex-direction:column}.hbtns a{justify-content:center}
   .hname{letter-spacing:-2px}
+  .hpills{gap:.35rem}
+  .hpill{font-size:.72rem;padding:.28rem .65rem}
+  .ecard{padding:1.4rem}
+  .eproj{padding:1.1rem}
+  .epname{font-size:.8rem}
+  .achgrid{gap:.8rem}
+  .ac{padding:1.2rem}
+  .cform2{padding:1.4rem}
+  .constellation-wrap{min-height:320px}
+  .hright{min-height:320px}
+  .ld-body{padding:1.2rem 1.2rem 1.4rem}
+  .ll{font-size:.72rem;line-height:1.9}
 }
 
 /* ═══ LOADER — Terminal Boot ═══ */
@@ -335,18 +355,140 @@ footer{background:var(--bg);border-top:1px solid var(--b1);padding:2rem 0;z-inde
 
 /* ── LIGHT THEME ── */
 body.light{
-  --bg:#f5f5f7;--bg2:#eeeef2;--s1:#e8e8f0;--s2:#dddde8;--s3:#d0d0e0;
-  --b1:rgba(0,0,0,.08);--b2:rgba(0,0,0,.13);--b3:rgba(0,0,0,.2);
-  --t1:#0a0a14;--t2:#3a3a5a;--t3:#7a7a9a;
+  --bg:#f6f6fb;--bg2:#ededf6;--s1:#e6e6f2;--s2:#dcdcec;--s3:#cccce0;
+  --b1:rgba(80,60,160,.1);--b2:rgba(80,60,160,.16);--b3:rgba(80,60,160,.26);
+  --t1:#0d0d20;--t2:#28284a;--t3:#60609a;
+  --p1:#6d28d9;--p2:#5b21b6;--p3:#4c1d95;
+  --g1:#16a34a;--g2:#15803d;
+  --cy:#0369a1;--yw:#b45309;
 }
-body.light nav{background:rgba(245,245,247,.85)}
-body.light #loader{background:var(--bg)}
-body.light .ld-term{background:#f0f0f5;border-color:rgba(124,58,237,.25)}
-body.light .ld-bar{background:#e0e0ea}
-body.light .lt-dim{color:#aaaacc}
-body.light .lt-w{color:#1a1a2e}
-body.light #cvs{opacity:.35}
-body.light .hgrid{background-image:linear-gradient(rgba(124,58,237,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(124,58,237,.06) 1px,transparent 1px)}
+/* Nav */
+body.light nav{background:rgba(246,246,251,.94);border-bottom:1px solid rgba(80,60,160,.1)}
+body.light nav.up{box-shadow:0 4px 24px rgba(80,60,160,.08)}
+body.light .nlogo em{color:var(--p1)}
+body.light .nlinks a{color:#404070}
+body.light .nlinks a:hover{background:rgba(109,40,217,.06);color:var(--p1)}
+body.light #themeBtn{border-color:rgba(80,60,160,.2);color:#606090}
+body.light #themeBtn:hover{border-color:var(--p1);color:var(--p1)}
+/* Blobs — subtle in light */
+body.light .b1,.b2,.b3{opacity:.5}
+body.light .noise{opacity:.008}
+body.light #cvs{opacity:.18}
+/* Hero */
+body.light .hgrid{background-image:linear-gradient(rgba(109,40,217,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(109,40,217,.04) 1px,transparent 1px)}
+body.light .hgreet{color:#606090}
+body.light .hrole{color:#707099}
+body.light .hpill{background:rgba(109,40,217,.05);border-color:rgba(109,40,217,.18);color:#404070}
+body.light .hpill:hover{border-color:rgba(109,40,217,.4);color:var(--p1);background:rgba(109,40,217,.08)}
+body.light .btn-line{border-color:rgba(109,40,217,.3);color:#28284a;background:rgba(109,40,217,.04)}
+body.light .btn-line:hover{border-color:var(--p1);color:var(--p1)}
+body.light .hst-n{background:linear-gradient(135deg,var(--p1),var(--g1));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+body.light .hst-l{color:#707099}
+body.light .hsep{background:rgba(80,60,160,.15)}
+body.light .hscroll{color:#9090b8}
+/* Section labels + titles */
+body.light .slbl{color:var(--p1)}
+body.light .slbl::before{background:linear-gradient(90deg,var(--p1),transparent)}
+body.light .stitle em{background:linear-gradient(135deg,var(--p1),#2563eb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+body.light .stitle{color:#0d0d20}
+/* Alternating section bg */
+body.light section{background:var(--bg)}
+body.light #dsa,body.light #skills,body.light #achievements{background:var(--bg2)}
+/* About */
+body.light .at p{color:#28284a}
+body.light .acard{background:#fff;border-color:rgba(80,60,160,.12);box-shadow:0 2px 20px rgba(80,60,160,.06)}
+body.light .astat-val{color:var(--p1)}
+body.light .astat-lbl{color:#707099}
+body.light .astat2{color:var(--g1)}
+body.light .live,.live-dot{background:var(--g1);box-shadow:0 0 8px var(--g1)}
+/* Skills */
+body.light .scat-row{background:#fff;border-color:rgba(80,60,160,.1);box-shadow:0 1px 8px rgba(80,60,160,.04)}
+body.light .scat-row:hover{border-color:rgba(109,40,217,.25);box-shadow:0 4px 16px rgba(80,60,160,.08)}
+body.light .scat-lbl{color:var(--g1);border-bottom-color:rgba(80,60,160,.08)}
+body.light .stag{background:rgba(109,40,217,.05);border-color:rgba(109,40,217,.15);color:#383870}
+body.light .stag:hover,.stag.hi{background:rgba(109,40,217,.1);border-color:rgba(109,40,217,.35);color:var(--p1)}
+/* DSA */
+body.light .dsacard{background:#fff;border-color:rgba(80,60,160,.12);box-shadow:0 2px 16px rgba(80,60,160,.06)}
+body.light .dsanum{color:var(--p1)}
+body.light .dsalbl{color:#707099}
+body.light .dsalink{color:var(--g1);border-color:rgba(22,163,74,.3)}
+body.light .dsalink:hover{background:rgba(22,163,74,.08)}
+body.light .dtopic{background:#fff;border-color:rgba(80,60,160,.1)}
+body.light .dtopic:hover{border-color:rgba(109,40,217,.25)}
+body.light .dtname{color:#28284a}
+body.light .dtbar{background:rgba(80,60,160,.1)}
+body.light .dplat{background:var(--bg2);border-color:rgba(80,60,160,.1)}
+body.light .dplat:hover{border-color:rgba(109,40,217,.25)}
+body.light .pname{color:#0d0d20}
+body.light .phandle{color:#707099}
+body.light .parr:hover{color:var(--g1)}
+/* Experience */
+body.light .ecard{background:#fff;border-color:rgba(80,60,160,.12);box-shadow:0 2px 20px rgba(80,60,160,.06)}
+body.light .ecard::before{background:linear-gradient(90deg,var(--p1),#2563eb,var(--g1))}
+body.light .eco{color:var(--cy)}
+body.light .erole{color:#0d0d20}
+body.light .eperiod{color:#707099}
+body.light .ebadge{background:rgba(22,163,74,.08);border-color:rgba(22,163,74,.2);color:var(--g1)}
+body.light .eproj{background:var(--bg2);border-color:rgba(80,60,160,.1)}
+body.light .eproj:hover{border-color:rgba(109,40,217,.25)}
+body.light .epname{color:#0d0d20}
+body.light .ptag{background:rgba(109,40,217,.07);border-color:rgba(109,40,217,.2);color:var(--p1)}
+body.light .eprivbadge{color:#606090;border-color:rgba(80,60,160,.18)}
+body.light .eul li{color:#28284a}
+body.light .eul li::before{color:var(--p1)}
+body.light .eul strong{color:#0d0d20}
+body.light .tr-row span{background:rgba(109,40,217,.06);border-color:rgba(109,40,217,.18);color:var(--p1)}
+/* Projects */
+body.light .pc{background:#ffffff !important;border-color:rgba(80,60,160,.14)}
+body.light .pc:hover{border-color:rgba(109,40,217,.35);box-shadow:0 12px 32px rgba(80,60,160,.12);background:#ffffff !important}
+body.light .pc::before{background:none !important}
+body.light .ecard::after{background:none !important}
+body.light .hright::before{background:none !important}
+body.light .dcglow{opacity:0}
+body.light .acglow{opacity:.15}
+body.light .acgl{opacity:.15}
+body.light .pn{color:rgba(109,40,217,.1)}
+body.light .pc h3{color:#0d0d20 !important}
+body.light .pdesc{color:#2a2a4a !important}body.light .phi li{color:#2a2a4a !important}
+body.light .pst span{background:rgba(109,40,217,.08);border-color:rgba(109,40,217,.22);color:var(--p1)}
+body.light .plnk{color:var(--p1);border-color:rgba(109,40,217,.25);background:rgba(109,40,217,.04)}
+body.light .plnk:hover{background:rgba(109,40,217,.08)}
+body.light .plnk.priv{color:#707099;border-color:rgba(80,60,160,.18)}
+/* Achievements */
+body.light .ac{background:#fff;border-color:rgba(80,60,160,.12)}
+body.light .ac:hover{border-color:rgba(109,40,217,.3);box-shadow:0 8px 24px rgba(80,60,160,.08)}
+body.light .ac-num{color:var(--p1)}
+body.light .ac-lbl{color:#707099}
+body.light .ach{background:rgba(109,40,217,.06);border-color:rgba(109,40,217,.18);color:var(--p1)}
+/* Contact */
+body.light .ctitle{color:#0d0d20}
+body.light .cdesc{color:#28284a}
+body.light .clink2{background:#fff;border-color:rgba(80,60,160,.12)}
+body.light .clink2:hover{border-color:rgba(109,40,217,.35);box-shadow:0 8px 24px rgba(80,60,160,.08)}
+body.light .cico{background:rgba(109,40,217,.07);border-color:rgba(109,40,217,.18);color:var(--p1)}
+body.light .ctxt strong{color:#0d0d20}
+body.light .ctxt span{color:#707099}
+body.light .fg label{color:#505080}
+body.light .fg input,.fg textarea{background:var(--bg2);border-color:rgba(80,60,160,.15);color:#0d0d20}
+body.light .fg input:focus,.fg textarea:focus{border-color:rgba(109,40,217,.45);background:#fff}
+body.light .fg input::placeholder,.fg textarea::placeholder{color:#9090b8}
+/* Footer */
+body.light .ecard2::after{background:linear-gradient(to top,var(--p1),var(--g1))}
+
+body.light .pc *{color:inherit}
+body.light .pc p,body.light .pc li{color:#28284a !important}
+body.light .pc h3{color:#0d0d20 !important}
+body.light .pn{color:rgba(109,40,217,.08) !important}
+body.light .phi li::before{color:var(--p1)}
+body.light footer{background:var(--bg);border-top-color:rgba(80,60,160,.1)}
+body.light .fcopy{color:#8080a8}
+body.light .ftop{border-color:rgba(80,60,160,.2);color:#7070a0}
+body.light .ftop:hover{color:var(--p1);border-color:var(--p1)}
+/* Right panel constellation */
+body.light .hright{background:linear-gradient(135deg,rgba(109,40,217,.04),rgba(37,99,235,.02));border-left-color:rgba(80,60,160,.1)}
+body.light .constellation-label{color:#9090b8}
+/* Scroll bar */
+body.light #spbar{background:linear-gradient(90deg,var(--p1),#2563eb,var(--g1))}
 #themeBtn{background:none;border:1px solid var(--b2);color:var(--t2);width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;cursor:none;font-size:1rem;transition:var(--tr);margin-left:.6rem;flex-shrink:0}
 #themeBtn:hover{border-color:var(--p1);color:var(--p1)}
 </style>
@@ -545,6 +687,20 @@ body.light .hgrid{background-image:linear-gradient(rgba(124,58,237,.06) 1px,tran
           </ul>
           <div class="tr-row"><span>Next.js</span><span>MongoDB</span><span>Zoho Books</span><span>Google OAuth</span><span>AWS S3</span><span>Multi-tenant SaaS</span></div>
         </div>
+        <div class="eproj">
+          <div class="epname">
+            <span class="ptag">Project 03</span>
+            Tortoise CRM — Order &amp; Inventory Management SaaS
+            <a href="https://github.com/ameypte/tortoise-crm" target="_blank" class="eprivbadge" style="text-decoration:none">GitHub ↗</a>
+          </div>
+          <ul class="eul">
+            <li>Built the complete <strong>E-Way Bill system</strong> from scratch — generation, storage, and update logic</li>
+            <li>Implemented <strong>AWS S3 integration</strong> with pre-signed URLs for secure invoice and e-way bill access</li>
+            <li>Enhanced invoice details panel with product data fetched from <strong>Zoho</strong> and digital signature validation</li>
+            <li>Added S3 pre-signed URL API endpoint; updated warehouse dispatch module with e-way bill support</li>
+          </ul>
+          <div class="tr-row"><span>Next.js 15</span><span>MongoDB</span><span>AWS S3</span><span>Zoho</span><span>NextAuth</span></div>
+        </div>
       </div>
     </div>
 
@@ -586,22 +742,7 @@ body.light .hgrid{background-image:linear-gradient(rgba(124,58,237,.06) 1px,tran
         <ul class="phi"><li>BERT semantic similarity pipeline with accuracy scoring</li><li>Cuts manual evaluation time significantly</li></ul>
         <div class="pst"><span>Python</span><span>Flask</span><span>BERT</span><span>scikit-learn</span><span>JavaScript</span></div>
       </div>
-      <div class="pc rv d1">
-        <div class="pn">04</div>
-        <div class="ph">
-          <h3>Tortoise CRM <span style="font-size:.72rem;color:var(--g1);font-weight:500;margin-left:.4rem">Open Source</span></h3>
-          <div class="proj-links">
-            <a href="https://github.com/ameypte/tortoise-crm" target="_blank" class="plnk" title="GitHub">↗</a>
-          </div>
-        </div>
-        <p class="pdesc">Contributed to a multi-role order &amp; inventory management SaaS integrating Zoho, AWS S3, and MongoDB. Built the complete E-Way Bill system and invoice infrastructure from scratch.</p>
-        <ul class="phi">
-          <li>Built E-Way Bill generation, storage, and update system end-to-end</li>
-          <li>Implemented AWS S3 integration with pre-signed URLs for secure invoice access</li>
-          <li>Enhanced invoice details panel with Zoho product data and digital signature validation</li>
-        </ul>
-        <div class="pst"><span>Next.js 15</span><span>MongoDB</span><span>AWS S3</span><span>Zoho</span><span>NextAuth</span><span>Open Source</span></div>
-      </div>
+
     </div>
   </div>
 </section>
